@@ -445,6 +445,7 @@ header {
     background-attachment: fixed;
     background-size: cover;
     padding: 40px 0;
+    background-position: center;
 }
 #feedback-list {
     overflow: hidden;
