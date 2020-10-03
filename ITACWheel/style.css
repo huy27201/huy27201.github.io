@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 * {
     margin: 0;
-    font-family: sans-serif;   
+    font-family: 'Montserrat';   
 }
 #container {
     display: flex;
@@ -35,7 +36,20 @@
     overflow: hidden;
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.5);
     transition: transform 10s ease;
-  }
+}
+.mini-circle {
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-image: url('Pictures/Logo.png');
+  background-position: center;
+  background-size: cover;
+  border: solid 2px #000;
+  transform: translate(-50%, -50%);
+}
 li {
     overflow: hidden;
     position: absolute;
@@ -44,7 +58,7 @@ li {
     width: 50%;
     height: 50%;
     transform-origin: 0% 100%;
-    border: solid 1.4px #000;
+    border: solid 1.4px #31302D;
   }
 .text {
     position: absolute;
@@ -52,72 +66,89 @@ li {
     width: 200%;
     height: 200%;
     text-align: center;
-    transform: skewY(45deg) rotate(22.5deg);
+    transform: skewY(50deg) rotate(20deg);
     padding-top: 20px;
 }
   li:first-child {
-    transform: rotate(0deg) skewY(-45deg);
+    transform: rotate(0deg) skewY(-50deg);
+    text-shadow: 2px 1px #fff;
   }
   li:nth-child(2) {
-    transform: rotate(45deg) skewY(-45deg);
+    transform: rotate(40deg) skewY(-50deg);
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
   }
   li:nth-child(3) {
-    transform: rotate(90deg) skewY(-45deg);
+    transform: rotate(80deg) skewY(-50deg);
   }
   li:nth-child(4) {
-    transform: rotate(135deg) skewY(-45deg);
+    transform: rotate(120deg) skewY(-50deg);
   }
   li:nth-child(5) {
-    transform: rotate(180deg) skewY(-45deg);
+    transform: rotate(160deg) skewY(-50deg);
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
   }
   li:nth-child(6) {
-    transform: rotate(225deg) skewY(-45deg);
+    transform: rotate(200deg) skewY(-50deg);
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
   }
   li:nth-child(7) {
-    transform: rotate(270deg) skewY(-45deg);
+    transform: rotate(240deg) skewY(-50deg);
   }
   li:nth-child(8) {
-    transform: rotate(315deg) skewY(-45deg);
+    transform: rotate(280deg) skewY(-50deg);
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+  }
+  li:nth-child(9) {
+    transform: rotate(320deg) skewY(-50deg);
   }
   li:first-child .text {
     background:#fff;
+    color: #111
   }
   li:nth-child(2) .text {
     background: #ECEC6C;
   }
   li:nth-child(3) .text {
-    background: #F4EA70;
+    background: #DAA510;
   }
   li:nth-child(4) .text {
-    background: #ECEC6C;
-  }
-  li:nth-child(5) .text {
-    background: #5F5C33;
-    color: #ddd;
-  }
-  li:nth-child(6) .text {
     background: #B4AA6D;
   }
+  li:nth-child(5) .text {
+    background: #ECEC6C;
+  }
+  li:nth-child(6) .text {
+    background: #fff;
+  } 
   li:nth-child(7) .text {
-    background: #A8A75B;
+    background: #DAA510;
   }
   li:nth-child(8) .text {
-    color: #ddd;
-    background: #3C3C14;
+    background: #ECEC6C;
+  }
+  li:nth-child(9) .text {
+    background: #B4AA6D;
   }
   p {
       transform: rotate(-90deg) translateX(-90px) translateY(-3px);
       display: inline-block;
       font-size: 1.5rem;
   }
+  img {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: rotate(-90deg) translateY(-55%);
+    width: 115px;
+  }
   .arrow-right {
     position: absolute;
     right: -20px;
     top: 46%;
     width: 0;
-	height: 0;
-	border-top: 25px solid transparent;
-	border-right: 50px solid #555;
+    height: 0;
+	  border-top: 25px solid transparent;
+	  border-right: 50px solid #555;
     border-bottom: 25px solid transparent;
     border-radius: 5px;
 }
@@ -126,14 +157,21 @@ li {
         width: 30em;
         height: 30em;
     }
+    .mini-circle {
+      width: 6em;
+      height: 6em;
+  }
     .arrow-right {
-        border-top: 20px solid transparent;
-	border-right: 40px solid #555;
-    border-bottom: 20px solid transparent;
+      border-top: 20px solid transparent;
+	    border-right: 40px solid #555;
+      border-bottom: 20px solid transparent;
     }
     p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         transform: rotate(-90deg) translateX(-70px) translateY(-3px);
+    }
+    img {
+      width: 75px;
     }
 }
 @media screen and (max-width: 600px) {
@@ -141,8 +179,12 @@ li {
         width: 20em;
         height: 20em;
     }
+    .mini-circle {
+      width: 4em;
+      height: 4em;
+    }
     p {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         transform: rotate(-90deg) translateX(-40px) translateY(-3px);
     }
     .arrow-right {
@@ -151,20 +193,30 @@ li {
         border-bottom: 15px solid transparent;
         right: -15px;
     }
+    img {
+      width: 50px;
+    }
 }
 @media screen and (max-width: 400px) {
     .circle {
-        width: 15em;
-        height: 15em;
+      width: 15em;
+      height: 15em;
+    }
+    .mini-circle {
+      width: 3em;
+      height: 3em;
     }
     p {
         font-size: 0.5rem;
-        transform: rotate(-90deg) translateX(-20px) translateY(-3px);
+        transform: rotate(-90deg) translateX(-15px) translateY(-3px);
     }
     .arrow-right {
         border-top: 12px solid transparent;
-	    border-right: 24px solid #555;
+	      border-right: 24px solid #555;
         border-bottom: 12px solid transparent;
         right: -10px;
+    }
+    img {
+      width: 35px;
     }
 }
