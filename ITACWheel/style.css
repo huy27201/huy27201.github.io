@@ -57,7 +57,7 @@
   background-position: center;
   background-size: cover;
   border: solid 2px #000;
-  transform: translate(-52%, -50%);
+  transform: translate(-50%, -50%);
 }
 li {
     overflow: hidden;
@@ -191,6 +191,7 @@ li {
     .mini-circle {
       width: 4em;
       height: 4em;
+      border: solid 1.5px #000;
     }
     p {
         font-size: 0.7rem;
@@ -214,6 +215,10 @@ li {
     .mini-circle {
       width: 3em;
       height: 3em;
+      border: solid 0.4px #000;
+    }
+    li {
+      border: solid 0.5px #31302D;
     }
     p {
         font-size: 0.5rem;
