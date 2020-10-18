@@ -1,8 +1,12 @@
 var present;
 var random = 0;
 var temp;
-var checkCharacter, checkCorrectCode, checkUsedCode = Array(100).fill(true);
-console.log(checkUsedCode);
+var checkCharacter, checkCorrectCode;
+var storageKey = 'codeUsed';
+var dataString = localStorage.getItem(storageKey);
+var codeUsed; 
+if (dataString) codeUsed = JSON.parse(dataString);
+else codeUsed = [];
 var code = [];
     fetch('Code.txt')
       .then(response => response.text())
@@ -26,7 +30,7 @@ function check() {
         }
         else  {
             checkCorrectCode = false;
-            for (var i = 0; i < 99; i++)
+            for (var i = 0; i < 100; i++)
             {
                 checkCharacter = true;
                 for (var j = 0; j < 10; j++)
@@ -38,8 +42,7 @@ function check() {
                 }
                 if (checkCharacter == true) {
                     checkCorrectCode = true;
-                    if (checkUsedCode[i] == true) {
-                        checkUsedCode[i] = false;
+                    if (codeUsed.indexOf(name) == -1) {
                         var value = Math.floor(Math.random() * 100); 
                         if (value == 0)
                         {
@@ -77,6 +80,8 @@ function check() {
                             swal("Chúc mừng!", "Bạn đã trúng " + present + "!", "success");
                             document.getElementById("layer").style.zIndex = "-1";
                         }, 11000);
+                        codeUsed.push(name);
+                        localStorage.setItem(storageKey, JSON.stringify(codeUsed));
                     }
                     else swal("Không hợp lệ!","Bạn đã sử dụng mã này rồi!","error");
                 }
