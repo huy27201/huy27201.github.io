@@ -72,7 +72,6 @@ li {
     width: 50%;
     height: 50%;
     transform-origin: 0% 100%;
-    border: solid 1.4px #31302D;
   }
 .text {
     position: absolute;
@@ -80,37 +79,34 @@ li {
     width: 200%;
     height: 200%;
     text-align: center;
-    transform: skewY(50deg) rotate(20deg);
+    transform: skewY(45deg) rotate(22.5deg);
     padding-top: 20px;
 }
   li:first-child {
-    transform: rotate(0deg) skewY(-50deg);
+    transform: rotate(0deg) skewY(-45deg);
   }
   li:nth-child(2) {
-    transform: rotate(40deg) skewY(-50deg);
+    transform: rotate(45deg) skewY(-45deg);
   }
   li:nth-child(3) {
-    transform: rotate(80deg) skewY(-50deg);
+    transform: rotate(90deg) skewY(-45deg);
   }
   li:nth-child(4) {
-    transform: rotate(120deg) skewY(-50deg);
+    transform: rotate(135deg) skewY(-45deg);
   }
   li:nth-child(5) {
-    transform: rotate(160deg) skewY(-50deg);
+    transform: rotate(180deg) skewY(-45deg);
   }
   li:nth-child(6) {
-    transform: rotate(200deg) skewY(-50deg);
+    transform: rotate(225deg) skewY(-45deg);
   }
   li:nth-child(7) {
-    transform: rotate(240deg) skewY(-50deg);
+    transform: rotate(270deg) skewY(-45deg);
   }
   li:nth-child(8) {
-    transform: rotate(280deg) skewY(-50deg);
+    transform: rotate(315deg) skewY(-45deg);
   }
-  li:nth-child(9) {
-    transform: rotate(320deg) skewY(-50deg);
-  }
-  li:first-child, li:nth-child(2), li:nth-child(4), li:nth-child(5), li:nth-child(6), li:nth-child(8), li:nth-child(9) {
+  li:first-child, li:nth-child(2), li:nth-child(4), li:nth-child(5), li:nth-child(7), li:nth-child(8) {
     text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
   }
   li:first-child .text {
@@ -130,15 +126,12 @@ li {
     background: #ECEC6C;
   }
   li:nth-child(6) .text {
-    background: #fff;
-  } 
-  li:nth-child(7) .text {
     background: #DAA510;
   }
-  li:nth-child(8) .text {
+  li:nth-child(7) .text {
     background: #ECEC6C;
   }
-  li:nth-child(9) .text {
+  li:nth-child(8) .text {
     background: #B4AA6D;
   }
   p {

@@ -1,19 +1,19 @@
-var present;
-var random = 0;
-var temp;
-var checkCharacter, checkCorrectCode;
+var present, temp;
+var PGG = 10, HHIT = HHK20 = 50; 
+var random = 0;                                         
+var checkCharacter, checkCorrectCode;                   //biến kiểm tra mã
 var storageKey = 'codeUsed';
 var dataString = localStorage.getItem(storageKey);
-var codeUsed; 
+var codeUsed;                                       //Array chứa các mã đã sử dụng
 if (dataString) codeUsed = JSON.parse(dataString);
 else codeUsed = [];
 var code = [];
-    fetch('CodeTestChuKhongPhaiDeXai.txt')
+    fetch('Code.txt')                               //Load array chứa mã
       .then(response => response.text())
       .then(data => {
           code = data.split('\n');
       });
-function check() {
+function check() {                                  //kiểm tra mã và quay
     swal({
         text: 'Nhập mã 10 kí tự',
         content: "input",
@@ -43,42 +43,47 @@ function check() {
                 if (checkCharacter == true) {
                     checkCorrectCode = true;
                     if (codeUsed.indexOf(name) == -1) {
-                        var value = Math.floor(Math.random() * 100); 
-                        if (value == 0)
-                        {
-                            temp = 130;
-                            present = "Dây đeo Black";
-                        } 
-                        else if (value <= 8 && value >= 1) {
-                            temp = 290;
-                            present = "Dây đeo Golden";
-                        }  
-                        else if (value <= 34) {
-                            let randomPiece = Math.floor(Math.random() * 10);
-                            if (randomPiece < 4) temp = 50;
-                            else temp = 250;
-                            present = "Huy hiệu ITAC";
-                        } 
-                        else if (value <= 60) {
-                            let randomPiece = Math.floor(Math.random() * 10);
-                            if (randomPiece < 4) temp = 10;
-                            else temp = 170;
-                            present = "Phiếu ưu đãi 20%";
-                        } 
-                        else {
-                            let randomPiece = Math.floor(Math.random() * 10);
-                            if (randomPiece < 3) temp = 90;
-                            else if (randomPiece < 6) temp = 210;
-                            else temp = 330;
-                            present = "Huy hiệu K20";
-                        } 
+                        do {
+                            var value = Math.floor(Math.random() * 100); 
+                            if (value == 0 || value == 1)
+                            {
+                                temp = 295;
+                                present = "Dây đeo Black";
+                                break;
+                            } 
+                            else if ((value <= 33) && HHIT > 0) {
+                                let randomPiece = Math.floor(Math.random() * 10);
+                                if (randomPiece < 4) temp = 70;
+                                else temp = 250;
+                                present = "Huy hiệu ITAC";
+                                HHIT--;
+                                break;
+                            } 
+                            else if ((value <= 51) && (PGG > 0)) {
+                                let randomPiece = Math.floor(Math.random() * 10);
+                                if (randomPiece < 4) temp = 25;
+                                else temp = 160;
+                                present = "Phiếu ưu đãi 20%";
+                                PGG--;
+                                break;
+                            } 
+                            else if ((value <= 99) && (HHK20 > 0)) {
+                                let randomPiece = Math.floor(Math.random() * 10);
+                                if (randomPiece < 3) temp = 115;
+                                else if (randomPiece < 6) temp = 205;
+                                else temp = 340;
+                                present = "Huy hiệu K20";
+                                HHK20--;
+                                break;
+                            } 
+                        } while (1);            
                         document.getElementById("layer").style.zIndex = "999";
                         random = random + temp + 3600;
                         document.getElementById("circle").style.transform=`rotate(${-random}deg)`;
                         random -= temp;
                         setTimeout(() => { 
                             swal("Chúc mừng!", "Bạn đã trúng " + present + "!", "success");
-                            document.getElementById("layer").style.zIndex = "-1";
+                             document.getElementById("layer").style.zIndex = "-1";
                         }, 11000);
                         codeUsed.push(name);
                         localStorage.setItem(storageKey, JSON.stringify(codeUsed));
