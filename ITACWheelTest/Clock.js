@@ -1,5 +1,5 @@
 var present, temp;
-var PGG = 10, HHIT = HHK20 = 50; 
+var PGG = 10, HHIT = HHK20 = 50, BLACK = 1; 
 var random = 0;                                         
 var checkCharacter, checkCorrectCode;                   //biến kiểm tra mã
 var storageKey = 'codeUsed';
@@ -45,10 +45,11 @@ function check() {                                  //kiểm tra mã và quay
                     if (codeUsed.indexOf(name) == -1) {
                         do {
                             var value = Math.floor(Math.random() * 100); 
-                            if (value == 0 || value == 1)
+                            if ((value == 0 || value == 1) && (BLACK))
                             {
                                 temp = 295;
                                 present = "Dây đeo Black";
+                                BLACK--;
                                 break;
                             } 
                             else if ((value <= 33) && HHIT > 0) {
@@ -96,5 +97,9 @@ function check() {                                  //kiểm tra mã và quay
     });
 }
 document.getElementById("circle").addEventListener("click", () => {
-    check();
+    if (BLACK === 0 && HHIT === 0 && HHK20 === 0 && PGG === 0)
+        {
+            swal("Hết quà rồi :(","Hẹn gặp bạn tại chương trình lần sau nhé :')","warning");
+        } 
+    else check();
 });
