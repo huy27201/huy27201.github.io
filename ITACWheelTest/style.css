@@ -4,6 +4,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Sriracha';
+  src: url('Fonts/Sriracha-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 * {
     margin: 0;
     font-family: 'Montserrat';   
@@ -26,6 +32,21 @@
   z-index: -1;
   background-color: transparent;
 }
+#title {
+  display: flex;
+  justify-content: center;
+}
+#title h1{
+  font-family: 'Sriracha';
+  position: absolute;
+  top: -9%;
+  color: #ECEC6C;
+  z-index: 998;
+  font-size: 70px;
+  text-align: center;
+  text-shadow: 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000;
+  cursor: default;
+}
 .animate {
     animation: turn 10s ease;
 }
@@ -39,6 +60,7 @@
 } 
 .wheel {
     position: relative;
+    cursor: pointer;
 }
 .circle {
     position: relative;
@@ -73,6 +95,7 @@ li {
     width: 50%;
     height: 50%;
     transform-origin: 0% 100%;
+    text-shadow: 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff;
   }
 .text {
     position: absolute;
@@ -106,10 +129,6 @@ li {
   }
   li:nth-child(8) {
     transform: rotate(315deg) skewY(-45deg);
-  }
-  li {
-    text-shadow: 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff;
-    /* text-shadow: 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff; */
   }
   li:first-child .text {
     background:#fff;
@@ -175,6 +194,10 @@ li {
     .voucher {
       width: 120px;
     }
+    #title h1 {
+      top: -20%;
+      font-size: 45px;
+    }
 }
 @media screen and (max-width: 600px) {
     .circle {
@@ -201,6 +224,9 @@ li {
     }
     .voucher {
       width: 75px;
+    }
+    #title h1 {
+      font-size: 35px;
     }
 }
 @media screen and (max-width: 400px) {
@@ -231,5 +257,8 @@ li {
     }
     .voucher {
       width: 55px;
+    }
+    #title h1 {
+      font-size: 25px;
     }
 }
