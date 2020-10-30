@@ -7,6 +7,7 @@ var dataString = localStorage.getItem(storageKey);
 var codeUsed;                                       //Array chứa các mã đã sử dụng
 if (dataString) codeUsed = JSON.parse(dataString);
 else codeUsed = ["9p07qEBLXU", "GyzkkMa5Rh", "tIWq395MbU", "wXlnllx3O6", "lYRwjnmMyV", "ipu8VNXttB", "fjs79RLnjc", "swTlUhkAzM", "mEin8fcSeV", "eNjzvTA8bj", "Z44MMVYFft", "r3pLRZ1Gzw"];
+localStorage.setItem(storageKey, JSON.stringify(codeUsed));
 var code = [];
     fetch('Code.txt')                               //Load array chứa mã
       .then(response => response.text())
