@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Login-Form/Setup.css">
+    <link rel="stylesheet" href="Sign_up.css">
+    <link rel="stylesheet" href="../css for all/background-animation.css">
+    <title>Signup</title>
+</head>
+<body>
+        <div class="background">
+            <div class="layer view-screen"></div>
+            <div class="form">
+                <div id="signup-div">
+                    <div id="signup-logo">
+                        <div data-tilt data-tilt-scale="1.3">
+                            <div><img src="../Pictures/activation.svg" alt=""></div>
+                            <h2 id="signup-icon">HUY Blog</h2>
+                        </div>
+                    </div>
+                    <form id="signup-form" autocomplete="off" onsubmit="Register(); return false;">
+                        <h2 id="signup-title">HUY Blog</h2>
+                        <div class="form-group">
+                            <label for="SU-Name">Name</label>
+                                <input type="text" class="SU-input" placeholder="Nguyen Gia Huy" id="SU-Name" required>
+                        </div>
+                        <div class="form-group">
+                                <label for="SU-Email">Email</label>
+                                <input type="email" class="SU-input" placeholder="abc@example.com" id="SU-Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="SU-Phone">Phone Number</label>
+                            <input type="tel" class="SU-input" placeholder="0123456789" id="SU=Phone" pattern="[0-9]{10}" required>
+                        </div>
+                        <div  class="form-group">
+                            <label for="Username">Username</label>
+                            <input type="text" class="SU-input" placeholder="Huy123" id="SU-Username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Password">Password</label>
+                            <input type="password" class="SU-input" placeholder="******" id="SU-Password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="SU-Confirm">Confirm Password</label>
+                            <input type="password" class="SU-input" placeholder="******" id="SU-Confirm" required>
+                        </div>
+                        <div id="SU-checkbox">
+                            <input type="checkbox" id="check-agree" required>
+                            <label for="check-agree">i agree to the terms of service</label>
+                        </div>
+                        <div id="register">
+                            <button id="SU-button">Register</button>
+                            <a href="Login.html" id="login-link" target="_blank">Have an account?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <script src="https://kit.fontawesome.com/a980ec8fc3.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="Signup.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+#signup-div {
+    background-color: #fafafa;
+    padding: 4rem 4rem 4rem;
+    box-shadow: -5px 3px 10px 5px rgba(0, 0, 0, 0.3), 5px -3px 10px 5px rgba(0, 0, 0, 0.1) ;
+    border-radius: 10px;
+    display: flex;
+    color: #333;
+    width: 800px;
+    box-sizing: border-box;
+}
+#signup-title {
+    display: none;
+}
+#signup-logo {
+    margin-left: -4rem;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+#signup-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.SU-input {
+    background-color: transparent;
+    border-bottom: solid 2px #333;
+    height: 30px;
+    box-sizing: border-box;
+    padding: 0 0.5rem;
+    width: 100%;
+}
+#signup-form label {
+    font-size: 0.8rem;
+    color:#666;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.form-group {
+    margin-bottom: 0.5rem;
+}
+#SU-button {
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    color: #fff;
+    background-color: #333;
+    transition: 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+#SU-button:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 3px 7px 1px rgba(0, 0, 0, 0.3);
+}
+#register {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+#login-link {
+    color: #333;
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    margin-bottom: 0.5rem;
+}
+#SU-checkbox {
+    margin-top: 0.7rem;
+}
+@media screen and (max-width: 800px)
+{
+    #register {
+        flex-direction: column;
+    }
+    #signup-logo {
+        display: none;
+    }
+    #signup-div {
+        justify-content: center;
+        width: auto;
+    }
+    #signup-div h2 {
+        display: inline;
+        text-align: center;
+    }
+    #signup-form {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 576px)
+{
+    #signup-div {
+        padding: 2.5rem 2rem 2rem;
+    }
+    #signup-form label {
+        font-size: 0.6rem;
+    }
+    .SU-input {
+        height:24px;
+        font-size: 0.8rem;
+    }
+    .form-group {
+        margin-bottom: 0.1rem;
+    }
+    #SU-checkbox {
+        margin-top: 0.2rem;
+    }
+    #register {
+        margin-top: 0.4rem;
+    }
+    #SU-button {
+        padding: 0.3rem 1.5rem;
+        font-size: 0.8rem;
+    }
+    #login-link {
+        text-align: center;
+        font-size: 0.7rem;
+    }
+}

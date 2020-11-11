@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    font-family: monospace;
+    color: floralwhite;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: floralwhite;
+}
+#container {
+    position: relative;
+    overflow: hidden;
+}
+header {
+    padding-top: 24px;
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    z-index: 999;
+    padding: 3px 0;
+}
+#logo-nav a {
+    text-transform: uppercase;
+    font-family: 'SVN-Holiday';
+    font-size: 26px;
+    cursor: pointer;
+}
+.margin-100 {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav-list {
+    display: flex;
+}
+.nav-item {
+    padding: 10px 0;
+}
+.nav-item a {
+    margin: 0 1rem;
+    padding: 10px 15px;  
+    font-size: 18px;
+    display: block;
+    transition: 0.3s;
+    position: relative;
+    text-align: center;
+} 
+#login-button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background-color: floralwhite;
+    transition: 0.3s;
+}
+#login-button:hover::before {
+    width: 70%;    
+}   
+#signup-button {
+    border: solid 1px floralwhite;
+    border-radius: 3px;
+}
+#signup-button:hover {
+    background-color: floralwhite;
+    color: #000;
+}
+#home-background {
+    background:  url('../Pictures/Background.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#title {
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+}
+#title h1 {
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    margin: 1rem 0;
+    letter-spacing: 0.5rem;
+    animation: h1 2s 1;
+}
+@keyframes h1 {
+    0% {
+        color: transparent;
+    }
+    30% {
+        letter-spacing: 25px;   
+    }
+    85% {
+        letter-spacing: 0.5rem;
+    }
+}
+.hr {
+    overflow: hidden;
+    border-bottom: solid 3px floralwhite;
+}
+.hr h3 {
+    margin: 1rem 0;
+    transform: translate(0, 120%);
+    font-size: 2rem;
+    animation: up 0.5s 1;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes up {
+    0% { transform: translate3d(0, 120%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+hr {
+    height: 5px;
+    background-color: floralwhite;
+}
+#title-button {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+    animation: fade 1.5s 1;
+    animation-fill-mode: forwards;
+    transform: translate(0%, 120%);
+}
+#title-button a {
+    border: solid 1px floralwhite;
+    border-radius: 2px;
+    padding: 10px 20px;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+@keyframes fade {
+    from {
+        transform: translate(0%, 120%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+}
+#login-but:hover {
+    background-color: floralwhite;
+    color: #000;
+}
+#signup-but {
+    background-color: floralwhite;
+    color: #000;
+}
+#icon-list {
+    margin-right: 2.5rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    z-index: 98;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#contact {
+    margin-bottom: 2rem;
+}
+#contact li a {
+    border: solid 2px floralwhite;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 1rem;
+    transition: 0.3s;
+}
+#contact li a:hover {
+    background-color: floralwhite;
+}
+#contact li a:hover i {
+    color: #000;
+}
+#contact li a i {
+    font-size: 20px;
+}
+#contact li {
+    transform: translateX(150%);
+}
+#contact li:first-child {
+    animation: leftMove1 0.5s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+#contact li:nth-child(2) {
+    animation: leftMove2 0.5s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+}
+#contact li:last-child {
+    animation: leftMove3 0.5s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+@keyframes leftMove1 {
+    0% {
+        transform: translateX(150%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes leftMove2 {
+    0% {
+        transform: translateX(150%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes leftMove3 {
+    0% {
+        transform: translateX(150%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

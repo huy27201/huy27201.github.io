@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    animation: fade-in 1.5s ease;
+    width: 100%;
+    overflow: overlay;
+    color: #fffdf6;
+}
+@keyframes fade-in
+{
+    from {
+        opacity: 0;
+        transform: translateY(-3%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+* {
+    margin: 0;
+    font-size: 1rem;
+    font-family: Poppins;
+}
+input {
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+    height:auto;
+    image-rendering: pixelated;
+}
+::selection {
+    background-color: #ccc;
+}
+button {
+    outline: none;
+    border: none;
+}
+h2 {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    
+}
+a {
+    text-decoration: none;
+    color: #fffdf6;
+}
+.form {
+    padding: 1rem; 
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+#login-form {   
+    padding: 2.5rem 3rem 2rem;
+    background-color: transparent;
+    box-shadow: -5px 3px 10px 5px rgba(0, 0, 0, 0.3), 5px -3px 10px 5px rgba(0, 0, 0, 0.3) ;
+    text-align: center;
+}
+#login-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.login-input::placeholder {
+    color:#fff;
+}
+.login-input:focus {
+    border-bottom: solid 2px #fafafa;
+}
+#logo {
+   font-size: 7rem;
+}
+.input {
+    position: relative;
+    box-sizing: border-box;
+}
+.input .label {
+    position: absolute;
+    top : 26px;
+    left: 0.3rem;
+}
+.login-input {
+    height: 30px;
+    background-color: transparent; 
+    border-bottom: solid 2px #ccc;
+    margin: 1.3rem 0;
+    color: #fff;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+#seen {
+    position: absolute;
+    right: 0;
+    top: 28px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+#seen:hover {
+    color: #ccc;
+}
+#login-button {
+    height:45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 50px;
+    margin: 1rem 2rem;
+    color:#fffdf6;
+    cursor: pointer;
+    border: solid 2px #fffdf6;
+    transition: 0.3s ease;
+    font-weight: 800;
+}
+#login-button:hover {
+    background-color: #fffdf6;
+    color:#494949;
+}
+#forgot {
+    font-size: 0.8rem;
+}
+#forgot:hover {
+    text-decoration: underline;
+}
+#signup, #signup a{
+    margin-top: 3rem;
+    color:#fff;
+    font-size: 0.8rem;
+}
+#signup a {
+    color:#ece8d9;  
+    text-decoration: underline;
+    transition: 0.3s ease;
+}
+#signup a:hover {
+    color:#fff;
+}
+@media screen and (max-width:576px) {
+    #login-form {
+       padding: 1.5rem 0.5rem 1rem;
+    }
+    #login-form img {
+        width:50%;
+        margin: 0 auto;
+    }
+    .input {
+        width:90%;
+        margin: 0 auto;
+    }
+    h2 {
+        font-size: 1.6rem;
+        margin-top: 0;
+    }
+    .login-input {
+        font-size: 0.8rem;
+        margin: 0.8rem 0;
+        padding: 0 1.3rem ;
+    } 
+    #signup a, #signup, #forgot {
+        font-size: 0.6rem;
+    }
+    .input .label {
+        font-size: 0.7rem;
+        top: 20px;
+    }
+    #seen {
+        font-size: 0.8rem;
+        top: 22px;
+    }   
+    #login-button {
+        font-size: 0.8rem;
+        height:35px;
+        margin: 0.8rem 3rem;
+    }
+    #logo {
+        font-size: 3.4rem;
+    }
+}

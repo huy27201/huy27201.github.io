@@ -1,0 +1,50 @@
+.background {
+    background: url('../Pictures/Background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+.background::before {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 25%;
+    height: 100%;
+    background-color: transparent;
+    box-shadow: -5px 3px 10px 3px rgba(0, 0, 0, 0.2), 5px -3px 10px 3px rgba(0, 0, 0, 0.2);
+    animation: mirror 7s ease infinite;
+    background: url('../Pictures/Background.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 115%;
+}
+@keyframes mirror {
+    0%, 100% {
+        left: 0;
+        width:0%;
+    }
+    25%, 75% {
+        width: 100%;
+        left: 0;
+    }
+    50% {
+        left: 100%;
+        width: 0%;
+        background-size: 130%;
+    }
+}
+.layer {
+    background-color: #000;
+    opacity: 0.5;
+}
+.view-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
