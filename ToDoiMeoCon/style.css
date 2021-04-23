@@ -39,6 +39,7 @@ h1 {
 }
 #card-container {   
     margin-bottom:  3rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -49,18 +50,24 @@ h1 {
     transform: translateY(-10%);
     animation: zoomOdd 0.5s ease;
 }
+.card:hover:nth-child(odd) {
+    transform: translateY(-10%) scale(1.1);
+}
 .card:nth-child(even) {
     transform: translateY(10%);
     animation: zoomEven 0.5s ease;
 }
+.card:hover:nth-child(even) {
+    transform: translateY(10%) scale(1.1);
+}
 .card {
     background-color: #fff;
-    margin: 1rem 1rem;
+    margin: 1rem 1.5rem;
     flex-basis: 18%;
-    transition: 0.5s ease;
+    transition: 0.3s ease;
     position: relative;
     box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
-
+    cursor: pointer;
 }
 @keyframes zoomOdd {
     from {
@@ -83,7 +90,7 @@ h1 {
     }
 }
 .card-image {
-    width: 275px;
+    width: 250px;
     position: relative;
 }
 .card-image img {
@@ -103,11 +110,15 @@ h1 {
 }
 .card-info {
     text-transform: uppercase;
-    font-weight: bold;
-    padding: 20px 20px 40px;
+    padding: 20px;
 }
-.card-info p:first-child {
-    margin-bottom: 0.8rem;
+.card-info .card-describe {
+    margin-bottom: 0.4rem;
+    font-size: 0.8rem;
+}
+.card-info .card-name {
+    margin-bottom: 0.4rem;
+    font-weight: bold;
     font-size: 1.1rem;
 }
 #page-button-list {
