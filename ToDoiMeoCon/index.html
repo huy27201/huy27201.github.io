@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tổ đội Mèo con</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;0,900;1,400&display=swap');
+    </style>
 </head>
 <body>
     <div id="container">
@@ -21,104 +27,577 @@
             <div id="card-section">
                 <h1>THÀNH VIÊN</h1>
                 <div id="card-container">
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="card-layer"></div>
-                            <img src="./Pictures/Bảo_An.jpg" alt="">
-                        </div>
-                        <div class="card-info">
-                            <p class="card-name">Bảo An</p>
-                            <p class="card-describe">Máy khâu Quận 2</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="card-layer"></div>
-                            <img src="./Pictures/Trọng_Đức.jpg" alt="">
-                        </div>
-                        <div class="card-info">
-                            <p class="card-name">Trọng Đức</p>
-                            <p class="card-describe">Ba Gà</p>
+                    <div class="card-frame">
+                        <div class="card" onclick="showMember(0)">
+                            <a href="javacript:void(0)">
+                                <div class="card-image">
+                                    <div class="card-layer"></div>
+                                    <img src="./Pictures/Bảo_An.jpg" alt="">
+                                </div>
+                                <div class="card-info">
+                                    <p class="card-name">Bảo An</p>
+                                    <p class="card-describe">Máy khâu Quận 2</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="card-layer"></div>
-                            <img src="./Pictures/Mạnh_Đức.jpg" alt="">
-                        </div>
-                        <div class="card-info">
-                            <p class="card-name">Mạnh Đức</p>
-                            <p class="card-describe">Tư Lù</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="card-layer"></div>
-                            <img src="./Pictures/Đoàn_Huy.jpg" alt="">
-                        </div>
-                        <div class="card-info">
-                            <p class="card-name">Thế Huy</p>
-                            <p class="card-describe">Năm Pầu</p>
+                    <div class="card-frame">
+                        <div class="card"  onclick="showMember(1)">
+                            <a href="javacript:void(0)">
+                                <div class="card-image">
+                                    <div class="card-layer"></div>
+                                    <img src="./Pictures/Trọng_Đức.jpg" alt="">
+                                </div>
+                                <div class="card-info">
+                                    <p class="card-name">Trọng Đức</p>
+                                    <p class="card-describe">Ba Gà</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="card-layer"></div>
-                            <img src="./Pictures/Hải_Síl.jpg" alt="">
-                        </div>
-                        <div class="card-info">
-                            <p class="card-name">Hải Síl</p>
-                            <p class="card-describe">Giáo sư</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="card-layer"></div>
-                            <img src="./Pictures/Phương_Trang.jpg" alt="">
-                        </div>
-                        <div class="card-info">
-                            <p class="card-name">Phương Trang</p>
-                            <p class="card-describe">Chị Bảy</p>
+                    <div class="card-frame">
+                        <div class="card"  onclick="showMember(2)">
+                            <a href="javacript:void(0)">
+                                <div class="card-image">
+                                    <div class="card-layer"></div>
+                                    <img src="./Pictures/Mạnh_Đức.jpg" alt="">
+                                </div>
+                                <div class="card-info">
+                                    <p class="card-name">Mạnh Đức</p>
+                                    <p class="card-describe">Tư Lù</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="card-layer"></div>
-                            <img src="./Pictures/Group_logo.jpg" alt="">
-                        </div>
-                        <div class="card-info">
-                            <p class="card-name">Gia Minh</p>
-                            <p class="card-describe">Thầy Tám</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="card-layer"></div>
-                            <img src="./Pictures/Lê_Quang.jpg" alt="">
-                        </div>
-                        <div class="card-info">
-                            <p class="card-name">Lê Quang</p>
-                            <p class="card-describe">Shiba</p>
+                    <div class="card-frame">
+                        <div class="card"  onclick="showMember(3)">
+                            <a href="javacript:void(0)">
+                                <div class="card-image">
+                                    <div class="card-layer"></div>
+                                    <img src="./Pictures/Đoàn_Huy.jpg" alt="">
+                                </div>
+                                <div class="card-info">
+                                    <p class="card-name">Thế Huy</p>
+                                    <p class="card-describe">Năm Pầu</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="card-layer"></div>
-                            <img src="./Pictures/Quốc_Bảo.jpg" alt="">
-                        </div>
-                        <div class="card-info">
-                            <p class="card-name">Quốc Bảo</p>
-                            <p class="card-describe">Bé Mười</p>
+                    <div class="card-frame">
+                        <div class="card"  onclick="showMember(4)">
+                            <a href="javacript:void(0)">
+                                <div class="card-image">
+                                    <div class="card-layer"></div>
+                                    <img src="./Pictures/Hải_Síl.jpg" alt="">
+                                </div>
+                                <div class="card-info">
+                                    <p class="card-name">Hải Síl</p>
+                                    <p class="card-describe">Giáo sư</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="card-layer"></div>
-                            <img src="./Pictures/Gia_Huy.jpg" alt="">
+                    <div class="card-frame">
+                        <div class="card"  onclick="showMember(5)">
+                            <a href="javacript:void(0)">
+                                <div class="card-image">
+                                    <div class="card-layer"></div>
+                                    <img src="./Pictures/Phương_Trang.jpg" alt="">
+                                </div>
+                                <div class="card-info">
+                                    <p class="card-name">Phương Trang</p>
+                                    <p class="card-describe">Chị Bảy</p>
+                                </div>
+                            </a>
                         </div>
-                        <div class="card-info">
-                            <p class="card-name">Gia Huy</p>
-                            <p class="card-describe">Chúa Bã</p>
+                    </div>
+                    <div class="card-frame">
+                        <div class="card"  onclick="showMember(6)">
+                            <a href="javacript:void(0)">
+                                <div class="card-image">
+                                    <div class="card-layer"></div>
+                                    <img src="./Pictures/Gia_Minh.jpg" alt="">
+                                </div>
+                                <div class="card-info">
+                                    <p class="card-name">Gia Minh</p>
+                                    <p class="card-describe">Thầy Tám</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-frame">
+                        <div class="card"  onclick="showMember(7)">
+                            <a href="javacript:void(0)">
+                                <div class="card-image">
+                                    <div class="card-layer"></div>
+                                    <img src="./Pictures/Lê_Quang.jpg" alt="">
+                                </div>
+                                <div class="card-info">
+                                    <p class="card-name">Lê Quang</p>
+                                    <p class="card-describe">Shiba</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-frame">
+                        <div class="card"  onclick="showMember(8)">
+                            <a href="javacript:void(0)">
+                                <div class="card-image">
+                                    <div class="card-layer"></div>
+                                    <img src="./Pictures/Quốc_Bảo.jpg" alt="">
+                                </div>
+                                <div class="card-info">
+                                    <p class="card-name">Quốc Bảo</p>
+                                    <p class="card-describe">Bé Mười</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-frame">
+                        <div class="card"  onclick="showMember(9)">
+                            <a href="javacript:void(0)">
+                                <div class="card-image">
+                                    <div class="card-layer"></div>
+                                    <img src="./Pictures/Gia_Huy.jpg" alt="">
+                                </div>
+                                <div class="card-info">
+                                    <p class="card-name">Gia Huy</p>
+                                    <p class="card-describe">Chúa Bã</p>
+                                </div>
+                            </a>    
+                        </div>
+                    </div>
+                </div>
+                <div id="member-container">
+                    <div class="member-frame">
+                        <div class="member-card">
+                            <div class="card-image">
+                                <img src="./Pictures/Bảo_An.jpg" alt="">
+                            </div>
+                            <div class="member-profile-frame">
+                                <div class="member-profile">
+                                    <h4 class="member-name">Trần Bảo An</h4>
+                                    <p class="member-info">Ngày sinh: 15/12/2001</p>
+                                    <p class="member-info">Trường: ĐH Hoa Sen</p>
+                                    <p class="member-info">Khoa: Kinh tế Quản trị</p>
+                                    <p class="member-des">Đội trưởng mẫu mực của team trong Liên minh Huyền thoại, bậc thầy bóng rổ, máy khâu Quận 2...</p>
+                                    <ul class="card-social">
+                                        <li class="card-icon">
+                                            <a href="http://fb.com/baoan.tran.27" class="icon-item fb-icon" target="_blank">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://instagram.com/youngbiay.27" class="icon-item ig-icon" target="_blank">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://twitter.com" class="icon-item tw-icon" target="_blank">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://www.flickr.com" class="icon-item fl-icon" target="_blank">
+                                                <i class="fa fa-flickr"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://www.pinterest.com" class="icon-item pi-icon" target="_blank">
+                                                <i class="fab fa-pinterest"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-frame">
+                        <div class="member-card">
+                            <div class="card-image">
+                                <img src="./Pictures/Trọng_Đức.jpg" alt="">
+                            </div>
+                            <div class="member-profile-frame">
+                                <div class="member-profile">
+                                    <h4 class="member-name">Ngô Trọng Đức</h4>
+                                    <p class="member-info">Ngày sinh: 15/9/2001</p>
+                                    <p class="member-info">Trường: ĐH Khoa Học Tự Nhiên</p>
+                                    <p class="member-info">Khoa: Công nghệ thông tin</p>
+                                    <p class="member-des">Từng giành được học bổng của trường với điểm trung bình trên 9.0. Là một xạ thủ tài năng, có thể gánh đồng đội trên đôi vai mình trong tựa game CS:GO.</p>
+                                    <ul class="card-social">
+                                        <li class="card-icon">
+                                            <a href="https://fb.com/trongduc1509" class="icon-item fb-icon" target="_blank">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://instagram.com/trong.ducc" class="icon-item ig-icon" target="_blank">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://twitter.com" class="icon-item tw-icon" target="_blank">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://www.flickr.com" class="icon-item fl-icon" target="_blank">
+                                                <i class="fa fa-flickr"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://www.pinterest.com" class="icon-item pi-icon" target="_blank">
+                                                <i class="fab fa-pinterest"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-frame">
+                        <div class="member-card">
+                            <div class="card-image">
+                                <img src="./Pictures/Mạnh_Đức.jpg" alt="">
+                            </div>
+                            <div class="member-profile-frame">
+                                <div class="member-profile">
+                                    <h4 class="member-name">Trần Mạnh Đức</h4>
+                                    <p class="member-info">Ngày sinh: 27/11/2001</p>
+                                    <p class="member-info">Trường: ĐH Khoa Học Tự Nhiên</p>
+                                    <p class="member-info">Khoa: Công nghệ Thông Tin</p>
+                                    <p class="member-info">Từ một lãng tử đào hoa như Lee Kwang Soo trở thành John Wick phiên bản fake. Rất thích Khá Bảnh và ITZY.</p>
+                                    <ul class="card-social">
+                                        <li class="card-icon">
+                                            <a href="https://fb.com/profile.php?id=100022460080511" class="icon-item fb-icon" target="_blank">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://instagram.com/mandoo.2711" class="icon-item ig-icon" target="_blank">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://twitter.com" class="icon-item tw-icon" target="_blank">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://www.flickr.com" class="icon-item fl-icon" target="_blank">
+                                                <i class="fa fa-flickr"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://www.pinterest.com" class="icon-item pi-icon" target="_blank">
+                                                <i class="fab fa-pinterest"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-frame">
+                        <div class="member-card">
+                            <div class="card-image">
+                                <img src="./Pictures/Đoàn_Huy.jpg" alt="">
+                            </div>
+                            <div class="member-profile-frame">
+                                <div class="member-profile">
+                                    <h4 class="member-name">Đoàn Thế Huy</h4>
+                                    <p class="member-info">Ngày sinh: 19/8/2001</p>
+                                    <p class="member-info">Trường: ĐH Khoa Học Tự Nhiên</p>
+                                    <p class="member-info">Khoa: Công nghệ Thông Tin</p>
+                                    <p class="member-info">Fanboy chính hiệu của GFriend. Thành viên kì cựu của ITAC với chất giọng của một ca sĩ chuyên nghiệp. Món ăn yêu thích là sữa chua và thích nằm sấp. Thuộc máu M.</p>
+                                    <ul class="card-social">
+                                        <li class="card-icon">
+                                            <a href="http://fb.com/profile.php?id=100006353160215" class="icon-item fb-icon" target="_blank">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://instagram.com/huydoan_198" class="icon-item ig-icon" target="_blank">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://twitter.com" class="icon-item tw-icon" target="_blank">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://www.flickr.com" class="icon-item fl-icon" target="_blank">
+                                                <i class="fa fa-flickr"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://www.pinterest.com" class="icon-item pi-icon" target="_blank">
+                                                <i class="fab fa-pinterest"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-frame">
+                        <div class="member-card">
+                            <div class="card-image">
+                                <img src="./Pictures/Hải_Síl.jpg" alt="">
+                            </div>
+                            <div class="member-profile-frame">
+                                <div class="member-profile">
+                                    <h4 class="member-name">Cao Hải Síl</h4>
+                                    <p class="member-info">Ngày sinh: 20/12/2001</p>
+                                    <p class="member-info">Trường: ĐH Khoa Học Tự Nhiên</p>
+                                    <p class="member-info">Khoa: Công nghệ Thông Tin</p>
+                                    <p class="member-info">Wibu. Là một giáo sư cực kì tài giỏi và siêng năng với điểm trung bình từng đạt 9.0. Kỹ năng chơi game cực kì cao, bóng chuyền là môn sở trường.</p>
+                                    <ul class="card-social">
+                                        <li class="card-icon">
+                                            <a href="http://fb.com/haiSil837376" class="icon-item fb-icon" target="_blank">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://instagram.com/high.sew" class="icon-item ig-icon" target="_blank">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://twitter.com" class="icon-item tw-icon" target="_blank">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://www.flickr.com" class="icon-item fl-icon" target="_blank">
+                                                <i class="fa fa-flickr"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://www.pinterest.com" class="icon-item pi-icon" target="_blank">
+                                                <i class="fab fa-pinterest"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-frame">
+                        <div class="member-card">
+                            <div class="card-image">
+                                <img src="./Pictures/Phương_Trang.jpg" alt="">
+                            </div>
+                            <div class="member-profile-frame">
+                                <div class="member-profile">
+                                    <h4 class="member-name">Nguyễn Thị Phương Trang</h4>
+                                    <p class="member-info">Ngày sinh: 6/10/2001</p>
+                                    <p class="member-info">Trường: ĐH Khoa Học Tự Nhiên</p>
+                                    <p class="member-info">Khoa: Công nghệ Thông Tin</p>
+                                    <p class="member-info">Là phó bí thư Đoàn Khoa - Liên Chi Hội và là trưởng Ban Truyền thông Thách thức 2021. Ngoài ra còn là một Celebrity chính hiệu.</p>
+                                    <ul class="card-social">
+                                        <li class="card-icon">
+                                            <a href="http://fb.com/phtrngg" class="icon-item fb-icon" target="_blank">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://instagram.com/phtrngg" class="icon-item ig-icon" target="_blank">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://twitter.com" class="icon-item tw-icon" target="_blank">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://www.flickr.com" class="icon-item fl-icon" target="_blank">
+                                                <i class="fa fa-flickr"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://www.pinterest.com" class="icon-item pi-icon" target="_blank">
+                                                <i class="fab fa-pinterest"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-frame">
+                        <div class="member-card">
+                            <div class="card-image">
+                                <img src="./Pictures/Gia_Minh.jpg" alt="">
+                            </div>
+                            <div class="member-profile-frame">
+                                <div class="member-profile">
+                                    <h4 class="member-name">Lê Gia Minh</h4>
+                                    <p class="member-info">Ngày sinh: 15/12/2001</p>
+                                    <p class="member-info">Trường: ĐH Khoa Học Tự Nhiên</p>
+                                    <p class="member-info">Khoa: Công nghệ Thông Tin</p>
+                                    <p class="member-info">Bậc thầy lập trình, thông thạo các loại ngôn ngữ lập trình từ C++, Python cho đến Golang... Chơi CS:GO rất giỏi, gánh Ba Gà trên mọi mặt trận. Đã đi du học Đức.</p>
+                                    <ul class="card-social">
+                                        <li class="card-icon">
+                                            <a href="http://fb.com/silverbullet281" class="icon-item fb-icon" target="_blank">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://instagram.com/le.giaminh" class="icon-item ig-icon" target="_blank">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://twitter.com" class="icon-item tw-icon" target="_blank">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://www.flickr.com" class="icon-item fl-icon" target="_blank">
+                                                <i class="fa fa-flickr"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://www.pinterest.com" class="icon-item pi-icon" target="_blank">
+                                                <i class="fab fa-pinterest"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-frame">
+                        <div class="member-card">
+                            <div class="card-image">
+                                <img src="./Pictures/Lê_Quang.jpg" alt="">
+                            </div>
+                            <div class="member-profile-frame">
+                                <div class="member-profile">
+                                    <h4 class="member-name">Nguyễn Lê Quang</h4>
+                                    <p class="member-info">Ngày sinh: 10/4/2001</p>
+                                    <p class="member-info">Trường: ĐH Khoa Học Tự Nhiên</p>
+                                    <p class="member-info">Khoa: Công nghệ Thông Tin</p>
+                                    <p class="member-info">Tân thành viên lớp Cử nhân Tài Năng - Shiba. Có chính kiến, luôn cãi lại lời nói của người khác. Rất thích đánh yasuo, trẻ trâu khi chơi game.</p>
+                                    <ul class="card-social">
+                                        <li class="card-icon">
+                                            <a href="http://fb.com/profile.php?id=100006983204913" class="icon-item fb-icon" target="_blank">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://instagram.com/leequang121" class="icon-item ig-icon" target="_blank">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://twitter.com" class="icon-item tw-icon" target="_blank">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://www.flickr.com" class="icon-item fl-icon" target="_blank">
+                                                <i class="fa fa-flickr"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://www.pinterest.com" class="icon-item pi-icon" target="_blank">
+                                                <i class="fab fa-pinterest"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-frame">
+                        <div class="member-card">
+                            <div class="card-image">
+                                <img src="./Pictures/Quốc_Bảo.jpg" alt="">
+                            </div>
+                            <div class="member-profile-frame">
+                                <div class="member-profile">
+                                    <h4 class="member-name">Huỳnh Nhật Quốc Bảo</h4>
+                                    <p class="member-info">Ngày sinh: 15/12/2001</p>
+                                    <p class="member-info">Trường: ĐH Khoa Học Tự Nhiên</p>
+                                    <p class="member-info">Khoa: Công nghệ Thông Tin</p>
+                                    <p class="member-info">Còn có những biệt danh khác như: Bảo Dynamic Programming, Bảo Thuật Toán..
+                                    Là con đũy của Tư lù và Năm Pầu.</p>
+                                    <ul class="card-social">
+                                        <li class="card-icon">
+                                            <a href="http://fb.com/qb.spirit.1215" class="icon-item fb-icon" target="_blank">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://instagram.com/qb.spirit" class="icon-item ig-icon" target="_blank">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://twitter.com" class="icon-item tw-icon" target="_blank">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://www.flickr.com" class="icon-item fl-icon" target="_blank">
+                                                <i class="fa fa-flickr"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://www.pinterest.com" class="icon-item pi-icon" target="_blank">
+                                                <i class="fab fa-pinterest"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-frame">
+                        <div class="member-card">
+                            <div class="card-image">
+                                <img src="./Pictures/Gia_Huy.jpg" alt="">
+                            </div>
+                            <div class="member-profile-frame">
+                                <div class="member-profile">
+                                    <h4 class="member-name">Nguyễn Gia Huy</h4>
+                                    <p class="member-info">Ngày sinh: 27/2/2001</p>
+                                    <p class="member-info">Trường: ĐH Hoa Sen</p>
+                                    <p class="member-info">Khoa: Kinh tế quản trị</p>
+                                    <p class="member-info">Không có gì để nói!!</p>
+                                    <ul class="card-social">
+                                        <li class="card-icon">
+                                            <a href="http://fb.com/ghuy000" class="icon-item fb-icon" target="_blank">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://instagram.com/__ghuy__" class="icon-item ig-icon" target="_blank">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://twitter.com" class="icon-item tw-icon" target="_blank">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://www.flickr.com" class="icon-item fl-icon" target="_blank">
+                                                <i class="fa fa-flickr"></i>
+                                            </a>
+                                        </li>
+                                        <li class="card-icon">
+                                            <a href="https://www.pinterest.com" class="icon-item pi-icon" target="_blank">
+                                                <i class="fab fa-pinterest"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -130,6 +609,7 @@
             </div>
         </div>
     </div>
+    <script src="https://kit.fontawesome.com/a980ec8fc3.js" crossorigin="anonymous"></script>
     <script src="function.js"></script>
 </body>
 </html>
