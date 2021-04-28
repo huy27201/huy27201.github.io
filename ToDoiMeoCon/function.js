@@ -1,6 +1,16 @@
+
+//Nút trở về đầu trang
+window.onscroll = () => {
+    let winHeight = document.documentElement.scrollTop;
+    let returnButton = document.getElementById("return-to-top");
+    if (winHeight < 100) returnButton.style.display = "none";
+    else returnButton.style.display = "block";
+};
+
 //Chuyển đổi danh sách các thẻ thành viên
 var cardFrame = document.querySelectorAll(".card-frame");
 let cardSection = document.getElementById("card-section");
+
 for (var i = 3; i < cardFrame.length; i++)
 {
     cardFrame[i].style.display = "none";
@@ -14,6 +24,10 @@ for (var k = 0; k < pageButton.length; k++)
         {
             cardFrame[i].style.display = "none";
         }
+        for (var i = 0;i< pageButton.length;i++)
+        {
+            pageButton[i].classList.remove("active");
+        }
         if (event.target.innerText == 1)
         {
             for (var i = 0; i < 3; i++)
@@ -21,6 +35,7 @@ for (var k = 0; k < pageButton.length; k++)
                 cardFrame[i].style.display = "";
             }
             cardFrame[0].scrollIntoView({ block: 'center', behavior: 'smooth' });
+            pageButton[0].classList.add("active");
         }
         else if (event.target.innerText == 2) {
             for (var i = 0; i < 4; i++)
@@ -28,6 +43,7 @@ for (var k = 0; k < pageButton.length; k++)
                 cardFrame[i + 3].style.display = "";
             }
             cardFrame[4].scrollIntoView({ block: 'center', behavior: 'smooth' });
+            pageButton[1].classList.add("active");
         }
         else {
             for (var i = 0; i < 3; i++)
@@ -35,8 +51,8 @@ for (var k = 0; k < pageButton.length; k++)
                 cardFrame[i + 7].style.display = "";
             }
             cardFrame[7].scrollIntoView({ block: 'center', behavior: 'smooth' });
+            pageButton[2].classList.add("active");
         }
-        
     });
 }
 
@@ -66,6 +82,13 @@ function showMember(indexMember) {
         
     }  
     else {
+        hideMember(indexMember);
+    }
+}
+
+function hideMember(indexMember) {
+    for (var i = 3; i < cardFrame.length; i++)
+    {
         memberFrame[indexMember].style.height = "0";
         memberFrame[indexMember].style.padding = "0 30px";
         cardFrame[indexMember].scrollIntoView({ block: 'center', behavior: 'smooth' });
