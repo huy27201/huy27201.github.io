@@ -7,7 +7,7 @@
 
 ## Techstacks
 * HTML/CSS.
-* Vannilla JavaScript.
+* Vanilla JavaScript.
 * Lib: Sweet Alert.
 
 
