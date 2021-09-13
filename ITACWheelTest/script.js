@@ -1,5 +1,5 @@
 var present, temp;
-var PGG = 10, HHIT = HHK20 = 50, BLACK = 1; 
+var PGG = 10, HHIT = HHK20 = 50, BLACK = 1;              //biến số lượng quà
 var random = 0;                                         
 var checkCharacter, checkCorrectCode;                   //biến kiểm tra mã
 var storageKey = 'codeUsed';
@@ -9,26 +9,28 @@ if (dataString) codeUsed = JSON.parse(dataString);
 else codeUsed = ["9p07qEBLXU", "GyzkkMa5Rh", "tIWq395MbU", "wXlnllx3O6", "lYRwjnmMyV", "ipu8VNXttB", "fjs79RLnjc", "swTlUhkAzM", "mEin8fcSeV", "eNjzvTA8bj", "Z44MMVYFft", "r3pLRZ1Gzw"];
 localStorage.setItem(storageKey, JSON.stringify(codeUsed));
 var code = [];
-    fetch('Code.txt')                               //Load array chứa mã
-      .then(response => response.text())
-      .then(data => {
-          code = data.split('\n');
-      });
+
+fetch('Code.txt')                               //Load array chứa mã
+    .then(response => response.text())
+    .then(data => {
+        code = data.split('\n');
+    });
+
 function check() {                                  //kiểm tra mã và quay
     swal({
         text: 'Nhập mã 10 kí tự',
         content: "input",
         button: {
-          text: "OK",
+            ext: "OK",
         },
     })
     .then(name => {
         if (name != null) {
             if (name.length == 0) {
-                swal("Không có mã!","Bạn phải nhập mã.","error");
+                swal("Không có mã!", "Bạn phải nhập mã.", "error");
             }
-            else if (name.length != 10) {
-                swal("Mã không tồn tại!","Mã bạn vừa nhập không tồn tại.","error");
+            else if (name.length != 10) {   //Kiểm tra độ dài mã 10 kí tự
+                swal("Mã không tồn tại!", "Mã bạn vừa nhập không tồn tại.", "error");
             }
             else  {
                 checkCorrectCode = false;
@@ -86,23 +88,23 @@ function check() {                                  //kiểm tra mã và quay
                             random -= temp;
                             setTimeout(() => { 
                                 swal("Chúc mừng!", "Bạn đã trúng " + present + "!", "success");
-                                 document.getElementById("layer").style.zIndex = "-1";
+                                    document.getElementById("layer").style.zIndex = "-1";
                             }, 11000);
                             codeUsed.push(name);
                             localStorage.setItem(storageKey, JSON.stringify(codeUsed));
                         }
-                        else swal("Không hợp lệ!","Bạn đã sử dụng mã này rồi!","error");
+                        else swal("Không hợp lệ!", "Bạn đã sử dụng mã này rồi!", "error");
                     }
                 }
-                if (checkCorrectCode == false) swal("Mã không tồn tại!","Mã bạn vừa nhập không tồn tại.","error");
+                if (checkCorrectCode == false) swal("Mã không tồn tại!", "Mã bạn vừa nhập không tồn tại.", "error");
             }
         }
     });
 }
 document.getElementById("circle").addEventListener("click", () => {
-    if (BLACK === 0 && HHIT === 0 && HHK20 === 0 && PGG === 0)
+    if (BLACK === 0 && HHIT === 0 && HHK20 === 0 && PGG === 0)  //kiểm tra còn quà không
         {
-            swal("Hết quà rồi :(","Hẹn gặp bạn tại chương trình lần sau nhé :')","warning");
+            swal("Hết quà rồi :(", "Hẹn gặp bạn tại chương trình lần sau nhé :')", "warning");
         } 
     else check();
 });
