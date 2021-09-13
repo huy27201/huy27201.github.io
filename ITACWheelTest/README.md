@@ -5,7 +5,7 @@
 * Each code is used only once and then is stored in the **Local storage**.
 * Each prize has a different rate of winning. When there's no more prize, a popup is displayed.
 
-##Techstacks
+## Techstacks
 * HTML/CSS.
 * Vannilla JavaScript.
 * Lib: Sweet Alert.
