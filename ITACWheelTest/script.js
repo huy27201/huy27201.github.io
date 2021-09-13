@@ -47,36 +47,36 @@ function check() {                                  //kiểm tra mã và quay
                     if (checkCharacter == true) {
                         checkCorrectCode = true;
                         if (codeUsed.indexOf(name) == -1) {
-                            do {
-                                var value = Math.floor(Math.random() * 100); 
-                                if ((value == 0 || value == 1) && (BLACK))
+                            do {  
+                                var value = Math.floor(Math.random() * 100); //random number between 0 - 99
+                                if ((value == 0 || value == 1) && (BLACK)) //2%
                                 {
-                                    temp = 295;
+                                    temp = 295; //rotate 295deg
                                     present = "Dây đeo Black";
                                     BLACK--;
                                     break;
                                 } 
-                                else if ((value <= 33) && HHIT > 0) {
+                                else if ((value <= 33) && HHIT > 0) { //32%
                                     let randomPiece = Math.floor(Math.random() * 10);
-                                    if (randomPiece < 4) temp = 70;
-                                    else temp = 250;
+                                    if (randomPiece < 4) temp = 70; //rotate 70deg
+                                    else temp = 250; //rotate 250deg
                                     present = "Huy hiệu ITAC";
                                     HHIT--;
                                     break;
                                 } 
-                                else if ((value <= 51) && (PGG > 0)) {
+                                else if ((value <= 51) && (PGG > 0)) { //18%
                                     let randomPiece = Math.floor(Math.random() * 10);
-                                    if (randomPiece < 4) temp = 25;
-                                    else temp = 160;
+                                    if (randomPiece < 4) temp = 25; //rotate 25deg
+                                    else temp = 160; //rotate 160deg
                                     present = "Phiếu ưu đãi 20%";
                                     PGG--;
                                     break;
                                 } 
-                                else if ((value <= 99) && (HHK20 > 0)) {
+                                else if ((value <= 99) && (HHK20 > 0)) { //48%
                                     let randomPiece = Math.floor(Math.random() * 10);
-                                    if (randomPiece < 3) temp = 115;
-                                    else if (randomPiece < 6) temp = 205;
-                                    else temp = 340;
+                                    if (randomPiece < 3) temp = 115; //rotate 115deg
+                                    else if (randomPiece < 6) temp = 205; //rotate 205deg
+                                    else temp = 340; //rotate 340deg
                                     present = "Huy hiệu K20";
                                     HHK20--;
                                     break;
