@@ -1,0 +1,33 @@
+:root {
+    --primaryColor: linear-gradient( to bottom, #fea92a, #ff5400);
+    --secondaryColor: linear-gradient( to bottom, #f0f2f3, #dcdcdc);
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    font-family: 'Designosaur', sans-serif;
+    font-size: 0.75rem;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 1.5rem;
+    font-family: 'Designosaur', sans-serif;
+    color: #474747;
+}
+p {
+    margin: 0 0 1.5rem;
+    font-size: 0.75rem;
+    color: #a9a9a9;
+}
+header{
+    padding: 0 0.5rem;
+}
